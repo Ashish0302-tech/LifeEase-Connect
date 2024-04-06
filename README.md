@@ -65,6 +65,24 @@ This is a Django application which will give you  health-related data according 
 
 8. Open your web browser and navigate to http://localhost:8000 to access the application.
 
+## Snapshots
+
+# Home Page
+![Home](SnapShots/home.png)
+
+# Display Page
+![Home](SnapShots/Display.png)
+
+# Services Page
+![Home](SnapShots/Services.png)
+
+# Doctor's Page
+![Home](SnapShots/DoctorsPage.png)
+
+# Health Plan Page
+![Home](SnapShots/ViewPlan.png)
+
+
 ## Usage
 
 - Create a new user by filling up the form to check its BMI and steps to be taken.
