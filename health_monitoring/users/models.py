@@ -7,7 +7,7 @@ class User(models.Model):
     email = models.CharField(max_length=100,null=True, blank=True)
     height = models.FloatField()
     weight = models.FloatField()
-    bmi = models.FloatField(null=True, blank=True)  # Add BMI field
+    bmi = models.FloatField(null=True, blank=True)  
 
     def save(self, *args, **kwargs):
         if self.height and self.weight:

@@ -19,7 +19,6 @@ def create_user(request):
         user = User.objects.create(name=name, age=age, gender=gender, height=height, weight=weight, email=email)
         bmi = user.calculate_bmi()
 
-        # Send email to the user
         email_subject = 'Your BMI Information'
         email_template = 'email_template.html'
         email_content = render_to_string(email_template, {'user': user})
