@@ -10,6 +10,8 @@ This is a Django application which will give you  health-related data according 
 - Health Plan will be sent to your e-mail automatically when you register to our portal.
 - After User creation it will give you health plan like diet and exercises which you need to be taken according to BMI which will be calculated accordingly.
 - There are different plans for male and female category.
+- Like Best Diet plans for 65+ men and female seperatly, and i also add Best excercises for 65+ which will help you to live Healthy Lifestyle.
+- And i also add Emergency contact and link which will redirect to the https://www.doctor24x7.in/, which help elder people to handle emergency situation
 
 ## Installation
 
