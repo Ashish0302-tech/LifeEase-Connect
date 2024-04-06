@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialist Doctors</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.doctor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.doctor {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.doctor h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.specialty {
+    font-style: italic;
+    color: #555;
+}
+
+.more-info {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.more-info:hover {
+    text-decoration: underline;
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Specialist Doctors</h1>
+    </header>
+
+    <div class="doctor-container">
+        <div class="doctor">
+            <h2>Dr. John Doe</h2>
+            <p class="specialty">Cardiologist</p>
+            <p class="qualification">MD, PhD</p>
+            <p class="experience">Experience: 15 years</p>
+            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget libero ac massa mattis laoreet.</p>
+            <p class="contact">Contact: john.doe@example.com | +1 123-456-7890</p>
+            <a href="#" class="more-info">Get More Information</a>
+        </div>
+        
+        <div class="doctor">
+            <h2>Dr. Jane Smith</h2>
+            <p class="specialty">Oncologist</p>
+            <p class="qualification">MD</p>
+            <p class="experience">Experience: 20 years</p>
+            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget libero ac massa mattis laoreet.</p>
+            <p class="contact">Contact: jane.smith@example.com | +1 987-654-3210</p>
+            <a href="#" class="more-info">Get More Information</a>
+        </div>
+
+        <div class="doctor">
+            <h2>Dr. John Doe</h2>
+            <p class="specialty">Cardiologist</p>
+            <p class="qualification">MD, PhD</p>
+            <p class="experience">Experience: 15 years</p>
+            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget libero ac massa mattis laoreet.</p>
+            <p class="contact">Contact: john.doe@example.com | +1 123-456-7890</p>
+            <a href="#" class="more-info">Get More Information</a>
+        </div>
+        
+        <div class="doctor">
+            <h2>Dr. Jane Smith</h2>
+            <p class="specialty">Oncologist</p>
+            <p class="qualification">MD</p>
+            <p class="experience">Experience: 20 years</p>
+            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget libero ac massa mattis laoreet.</p>
+            <p class="contact">Contact: jane.smith@example.com | +1 987-654-3210</p>
+            <a href="#" class="more-info">Get More Information</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Healthcare Facility. All rights reserved.</p>
+    </footer>
+</body>
+</html>

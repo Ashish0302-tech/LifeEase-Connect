@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your BMI Information</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            color: #007bff;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your BMI Information</h1>
+    <p>Hello {{ user.name }},</p>
+    <p>Your BMI is {{ user.bmi }}.</p>
+    <p>Based on your BMI, here are some recommendations for maintaining a healthy lifestyle:</p>
+    <ul>
+        {% if user.bmi == 18.5 %}
+            <li>Eat a balanced diet with sufficient calories to support weight gain.</li>
+            <li>Incorporate strength training exercises to build muscle mass.</li>
+            <!-- Add more recommendations for underweight category -->
+        {% elif user.bmi >= 18.5 and user.bmi < 25 %}
+            Normal
+            <li>Maintain a balanced diet with a variety of nutrient-rich foods.</li>
+            <li>Engage in regular physical activity, such as walking, swimming, or cycling.</li>
+        {% elif user.bmi >= 25 and user.bmi < 30 %}
+            <li>Maintain a balanced diet with a variety of nutrient-rich foods.</li>
+            <li>Engage in regular physical activity, such as walking, swimming, or cycling.</li>
+            <!-- Add more recommendations for normal weight category -->
+        {% else %}
+            <li>Focus on portion control and reduce consumption of high-calorie foods.</li>
+            <li>Incorporate aerobic exercises like brisk walking or cycling to burn calories.</li>
+            <!-- Add more recommendations for overweight category -->
+        {% endif %}
+    </ul>
+    <p>For personalized health advice, consult with a healthcare professional.</p>
+    <p>Best regards,<br>LifeEase+ Team</p>
+</body>
+</html>
+
+
+

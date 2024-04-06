@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.service {
+    width: 30%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service h2 {
+    color: #007bff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+        
+    </header>
+
+    <div class="services-container">
+        <div class="service">
+            <h1>Service 1</h1>
+            <h2>Nutritional Counseling Service:</h2>
+            <ul>
+                <li>Description: Our nutritional counseling service is designed to help individuals achieve their health and wellness goals through personalized nutrition plans. Whether you're looking to lose weight, manage a medical condition, or simply adopt healthier eating habits, our team of registered dietitians will provide expert guidance and support.</li>
+                <h3>Benifits:</h3>
+                <li>Personalized nutrition plans tailored to your unique needs and preferences.</li>
+                <li>Guidance on portion control, meal planning, and grocery shopping.</li>
+                <li>Education on nutrition basics, including macronutrients, micronutrients, and food labeling.</li>
+            </ul>
+            
+        </div>
+        <div class="service">
+            <h2>Service 2</h2>
+            <h2>Fitness Training Service:</h2>
+            <ul>
+                <li>Description: Our fitness training service offers comprehensive workout programs designed to improve strength, endurance, flexibility, and overall fitness levels. Whether you're a beginner or an experienced athlete, our certified personal trainers will create customized exercise routines to help you reach your fitness objectives safely and effectively.</li>
+                <h3>Benifits:</h3>
+                <li>Customized workout plans tailored to your fitness goals, experience level, and schedule.</li>
+                <li>One-on-one coaching and instruction to ensure proper form and technique during exercises.</li>
+                <li>Varied workout routines to keep you engaged and prevent boredom.</li>
+            </ul>
+        </div>
+       
+    </div>
+
+    <footer>
+        <p>&copy; 2024 LifeEase+ Connect. All rights reserved.</p>
+    </footer>
+</body>
+</html>

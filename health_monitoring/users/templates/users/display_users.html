@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+
+        td button {
+            margin-right: 10px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        td button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .empty-row {
+            text-align: center;
+            color: #777;
+        }
+
+        .home-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .home-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .home-button button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>All Users</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>BMI</th>
+                <th>BMI Category</th>
+                <th>Actions</th>
+                <th>Remove</th> <!-- New column for Remove button -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.age }}</td>
+                    <td>{{ user.gender }}</td>
+                    <td>{{ user.height }}</td>
+                    <td>{{ user.weight }}</td>
+                    <td>{{ user.bmi }}</td>
+                    <td>
+                        {% if user.bmi %}
+                            {% if user.bmi < 18.5 %}
+                                Underweight
+                            {% elif user.bmi >= 18.5 and user.bmi < 25 %}
+                                Normal
+                            {% elif user.bmi >= 25 and user.bmi < 30 %}
+                                Overweight
+                            {% else %}
+                                Obese
+                            {% endif %}
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </td>
+                    <td>
+                        <div class="button-container">
+                            {% if user.bmi %}
+                                {% if user.bmi < 18.5 %}
+                                    <a href="{% url 'view_plan' user.id %}"><button>View Plan for Underweight</button></a>
+                                {% elif user.bmi >= 25 and user.bmi < 30 %}
+                                    <a href="{% url 'view_plan2' user.id %}"><button>View Plan for Overweight</button></a>
+                                {% elif user.bmi >= 30 %}
+                                    <a href="{% url 'view_plan3' user.id %}"><button>View Plan for Obese</button></a>
+                                {% else %}
+                                    Not needed
+                                {% endif %}
+                            {% else %}
+                                N/A
+                            {% endif %}
+                        </div>
+                    </td>
+                    <td>
+                        <a href="{% url 'remove_user' user.id %}"><button style="background-color: #dc3545;">Remove</button></a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="9" class="empty-row">No users found</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="home-button">
+        <a href="{% url 'home' %}"><button>Home</button></a>
+    </div>
+</body>
+</html>

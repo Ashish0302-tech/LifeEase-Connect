@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan for Achieving Normal BMI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #007bff;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Plan for Achieving Normal BMI</h2>
+        <h3>Steps:</h3>
+        <ul>
+            <li>Regular exercise: Engage in at least 30 minutes of moderate-intensity aerobic activity most days of the week.</li>
+            <li>Healthy eating: Consume a balanced diet rich in fruits, vegetables, lean proteins, and whole grains.</li>
+            <li>Stay hydrated: Drink plenty of water throughout the day to maintain hydration levels.</li>
+        </ul>
+        <h3>Precautions:</h3>
+        <ul>
+            <li>Avoid crash diets: Aim for gradual, sustainable weight loss rather than rapid weight loss methods.</li>
+            <li>Consult a healthcare professional: Before starting any new exercise or diet plan, consult with a doctor or nutritionist.</li>
+        </ul>
+        <h3>Diet Plan:</h3>
+        <p>Here is a sample diet plan for achieving and maintaining a normal BMI:</p>
+        <ul>
+            <li>Breakfast: Whole grain cereal with low-fat milk and sliced fruit.</li>
+            <li>Lunch: Grilled chicken salad with mixed greens, vegetables, and vinaigrette dressing.</li>
+            <li>Snack: Greek yogurt with berries.</li>
+            <li>Dinner: Baked salmon with steamed vegetables and quinoa.</li>
+        </ul>
+        <p>Remember to customize your diet plan according to your individual preferences and nutritional needs.</p>
+        <a href="https://www.healthdirect.gov.au/obesity#:~:text=See%20your%20doctor%20if%20you,measurement%20and%20health%20risks%20regularly" target="_blank">
+            <button>Get More Info</button>
+        </a>
+        <a href="{% url 'display_users' %}"><button>Back to Users</button></a>
+    </div>
+</body>
+</html>

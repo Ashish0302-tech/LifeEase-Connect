@@ -1,0 +1,112 @@
+<!-- about.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header-title {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .header-nav {
+            margin-top: 10px;
+        }
+
+        .header-link {
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .header-link:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .section-title {
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">About Us</h1>
+        <nav class="header-nav">
+            <a href="{% url 'home' %}" class="header-link">Home</a>
+            <a href="{% url 'create_user' %}" class="header-link">Create User</a>
+            <a href="{% url 'display_users' %}" class="header-link">Display Users</a>
+            <a href="{% url 'diet_plan' %}" class="header-link">Diet Plan</a>
+            <a href="{% url 'exercise_plan' %}" class="header-link">Exercise Plan</a>
+            <a href="{% url 'about' %}" class="header-link">About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2 class="section-title">Our Story</h2>
+            <p>We are dedicated to helping people live healthier lives...</p>
+            <!-- Add more content as needed -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 LifeEase+ Connect. All rights reserved.</p>
+    </footer>
+</body>
+</html>
