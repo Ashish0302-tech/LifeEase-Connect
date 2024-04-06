@@ -82,6 +82,10 @@ This is a Django application which will give you  health-related data according 
 # Health Plan Page
 ![Home](SnapShots/ViewPlan.png)
 
+# Email
+![Home](SnapShots/Email.png)
+
+
 
 ## Usage
 
