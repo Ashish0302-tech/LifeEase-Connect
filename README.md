@@ -83,7 +83,7 @@ This is a Django application which will give you  health-related data according 
 ![Home](SnapShots/ViewPlan.png)
 
 # Email
-![Home](SnapShots/Email.png)
+![Home](SnapShots/Email.jpeg)
 
 
 
