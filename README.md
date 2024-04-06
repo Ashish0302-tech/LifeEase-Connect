@@ -16,7 +16,7 @@ This is a Django application which will give you  health-related data according 
 1. Clone the repository:
 
     bash
-    git clone https://github.com/yourusername/health-monitoring-django-app.git
+    git clone https://github.com/Ashish0302-tech/LifeEase-Connect.git
     
 
 2. Navigate to the project directory:
