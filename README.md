@@ -71,7 +71,7 @@ This is a Django application which will give you  health-related data according 
 ![Home](SnapShots/home.png)
 
 # Display Page
-![Home](SnapShots/display.png)
+![Home](SnapShots/Display.png)
 
 # Services Page
 ![Home](SnapShots/Services.png)
